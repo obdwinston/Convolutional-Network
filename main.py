@@ -6,7 +6,7 @@ from model import lenet_predict, lenet_train
 
 test_ratio = 0.01
 epochs = 5
-alpha = 0.05 # learning rate
+alpha = 0.001 # learning rate
 batch_size = 64
 
 # load data

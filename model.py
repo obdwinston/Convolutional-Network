@@ -242,6 +242,21 @@ def lenet_train(X, y, epochs=10, alpha=0.05, batch_size=64):
     W_fc3 = np.random.randn(10, 84) * np.sqrt(2 / 84)
     b_fc3 = np.zeros((10, 1))
 
+    # params = np.load('./params.npz')
+
+    # costs = list(params['costs'])
+    # accuracies = list(params['accuracies'])
+    # W_c1 = params['W_c1']
+    # W_c2 = params['W_c2']
+    # W_fc1 = params['W_fc1']
+    # W_fc2 = params['W_fc2']
+    # W_fc3 = params['W_fc3']
+    # b_c1 = params['b_c1']
+    # b_c2 = params['b_c2']
+    # b_fc1 = params['b_fc1']
+    # b_fc2 = params['b_fc2']
+    # b_fc3 = params['b_fc3']
+
     for i in range(epochs):
 
         mini_batches = create_batches(X, y, batch_size)
