@@ -384,30 +384,31 @@ def lenet_predict(X, y, params):
     # plot results
     
     fig = plt.figure(figsize=(9, 6))
-    gs = fig.add_gridspec(2, 5)
+    gs = fig.add_gridspec(3, 5)
+    fig.suptitle(f'Prediction Examples (Accuracy: {accuracy: .2%})', fontsize=16, fontweight='bold')
 
     ax1 = fig.add_subplot(gs[0, :])
     ax1.set_xlabel('Iterations')
     ax1.set_ylabel('Cost', color='tab:blue')
     ax1.plot(costs, color='tab:blue', label='Cost')
     ax1.tick_params(axis='y', labelcolor='tab:blue')
-    ax1.set_title('Cost and Training Accuracy', fontweight='bold')
+    ax1.set_title('Cost and Accuracy', fontweight='bold')
     ax1.grid('on')
 
     ax2 = ax1.twinx()
-    ax2.set_ylabel('Training Accuracy', color='tab:orange')
+    ax2.set_ylabel('Accuracy', color='tab:orange')
     ax2.plot(accuracies, color='tab:orange', label='Accuracy')
     ax2.tick_params(axis='y', labelcolor='tab:orange')
-
-    random_indices = np.random.choice(m, 5, replace=False)
-    for i, idx in enumerate(random_indices):
-        ax = fig.add_subplot(gs[1, i])
+    
+    for digit in range(10):
+        idx = np.where(y_true[0] == digit)[0][0]
+        ax = fig.add_subplot(gs[(digit // 5) + 1, digit % 5])
         img = X[idx].reshape(28, 28)
         pred_label = y_pred[0, idx]
         true_label = y_true[0, idx]
         ax.imshow(img, cmap='gray')
         ax.set_title(f'Pred: {pred_label}, True: {true_label}')
         ax.axis('off')
-
+    
     plt.tight_layout()
     plt.show()

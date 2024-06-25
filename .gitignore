@@ -21,4 +21,4 @@ __pycache__/
 data/
 saves/
 save_cifar.py
-save_mnist.py
+# save_mnist.py
