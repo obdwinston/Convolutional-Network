@@ -1,4 +1,4 @@
-LeNet-5 (LeCun et al., 1998) from scratch.  
+LeNet-5 from scratch. Originally developed by LeCun et al. (1998).
 
 Interesting facts about [LeNet](https://en.wikipedia.org/wiki/LeNet):  
 - Progenitor of modern convolutional neural networks.
