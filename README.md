@@ -19,6 +19,7 @@ Program Files:
 | main.py | Runs main script for LeNet-5. |
 | model.py | Contains functions for LeNet-5. |
 | unpack.py | Unpacks MNIST dataset for LeNet-5. |
+| utils.py | Contains utility functions for LeNet-5. |
 | pytorch.py | LeNet-5 implementation with PyTorch. |
 | params.npz | Saved parameters for LeNet-5 (Current). |
 | params.pth | Saved parameters for LeNet-5 (PyTorch). |
