@@ -6,7 +6,7 @@ from array import array
 from os.path import join
 
 # load data
-input_path = './data/mnist'
+input_path = './data/mnist' # download and save Kaggle files to directory
 training_images_filepath = join(input_path, 'train-images-idx3-ubyte/train-images-idx3-ubyte')
 training_labels_filepath = join(input_path, 'train-labels-idx1-ubyte/train-labels-idx1-ubyte')
 
