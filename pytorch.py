@@ -73,7 +73,7 @@ class LeNet5(nn.Module):
         x = F.avg_pool2d(x, 2)      # layer 4: pooling
         x = x.view(-1, 16 * 5 * 5)  # flatten
         x = F.tanh(self.fc1(x))     # layer 5: fully-connected + activation
-        x = F.tanh(self.fc2(x))     # layer 6: fully-connected + Activation
+        x = F.tanh(self.fc2(x))     # layer 6: fully-connected + activation
         x = self.fc3(x)             # layer 7: fully-connected (output)
         return x
 
