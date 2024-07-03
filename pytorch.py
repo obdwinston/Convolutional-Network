@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 batch_size = 64
 learning_rate = 1e-3
-epochs = 20
+epochs = 5
 
 # +===========+
 # | Load Data |
@@ -94,7 +94,7 @@ model = LeNet5().to(device)
 print(model)
 
 loss_function = nn.CrossEntropyLoss()
-optimiser = torch.optim.SGD(model.parameters(), lr=learning_rate)
+optimiser = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 def train(dataloader, model, loss_function, optimiser):
     size = len(dataloader.dataset)
