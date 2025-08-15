@@ -1,4 +1,4 @@
-LeNet-5 from scratch. Originally developed by LeCun et al. (1998).
+LeNet-5 implemented from scratch. Originally developed by LeCun et al. (1998).
 
 Interesting facts about [LeNet](https://en.wikipedia.org/wiki/LeNet):
 
@@ -25,3 +25,4 @@ Program Files:
 | params.pth | Saved parameters for LeNet-5 (PyTorch). |
 
 ![image](https://github.com/obdwinston/Convolutional-Network/assets/104728656/e2cff080-f76f-4e59-b86b-63d184a46803)
+
